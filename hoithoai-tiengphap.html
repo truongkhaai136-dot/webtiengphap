@@ -449,7 +449,7 @@
             function speak(text, onEndCallback) {
                 if (synthesis.speaking) { synthesis.cancel(); }
                 const utterance = new SpeechSynthesisUtterance(text);
-                utterance.voice = voices.find(voice => voice.name === '	Microsoft Denise Online (Natural') || voices.find(voice => voice.lang === 'fr-FR');
+                utterance.voice = voices.find(voice => voice.name === '	Microsoft Denise Online (Natural)') || voices.find(voice => voice.lang === 'fr-FR');
                 utterance.onend = () => onEndCallback && onEndCallback();
                 synthesis.speak(utterance);
             }
@@ -918,3 +918,4 @@ function createDiffHtml(originalText, spokenText) {
     </script>
 </body>
 </html>
+
